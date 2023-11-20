@@ -1,300 +1,261 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://cdn.tailwindcss.com"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/all.min.js"></script>
 
-</head>
-<body class="bg-gray-800 text-gray-500">
-	<header class="z-10 sticky top-0 bg-gray-950 py-5"> <!-- header -->
-		<nav class="w-9/12 flex flex-row mx-auto">
-			<div class="uppercase text-lg basis-1/4"> <!-- logo -->
-				<a href="#hero">
-					<span class="font-extrabold text-white">Muh. Rizki</span>
-					<span class="font-extralight text-blue-400">kurniawan</span>
-				</a>
-			</div>
-			<div class="basis-3/4 flex items-center justify-end gap-14 "> <!-- Link -->
-				<a href="#services" class="hover:text-slate-200"><span>services</span></a>
-				<a href="#portfolio" class="hover:text-slate-200"><span>portfolios</span></a>
-				<a href="#experiences" class="hover:text-slate-200"><span>experiences</span></a>
-				<a href="#contact" class="hover:text-slate-200"><span>contact</span></a>
-			</div>
-		</nav>
-	</header>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: [
+                                "Roboto",
+                                "ui-sans-serif",
+                                "system-ui",
+                                "-apple-system",
+                                "BlinkMacSystemFont",
+                                "Segoe UI",
+                                "Roboto",
+                                "Helvetica Neue",
+                                "Arial",
+                                "Noto Sans",
+                                "sans-serif",
+                                "Apple Color Emoji",
+                                "Segoe UI Emoji",
+                                "Segoe UI Symbol",
+                                "Noto Color Emoji",
+                            ],
+                        },
 
-	<main id="hero" class="relative -top-20"> <!-- Main Content -->
-		<div class="bg-gray-950 "> <!-- Hero Section-->
-			<div class="mx-auto flex h-screen items-center w-9/12 "> 
-				<div class="basis-1/2"> <!-- deskripsi -->
-					<div class="flex items-center">
-						<svg class="stroke-gray-400 stroke-2 h-5 w-5">
-							<line x1="0" y1="10px" x2="10px" y2="10px"/>
-						</svg>
-						<h2 class="uppercase text-xs font-extralight tracking-ngangkang">
-							my name is
-						</h2>
-					</div>
-					<h3 class="font-bold text-4xl text-white">
-						<span>Muh. Rizki</span>
-						<span class="text-blue-700">kurniawan.</span>
-					</h3>
-					<p class="font-light">
-						Creative full-stack web developer with more than 5+ years of experience in enterprise companies and startups. Proficient in HTML, Tailwind CSS, Javascript, PHP, Laravel, NextJS, and ReactJS.
-					</p>
-					<div class="flex flex-row mt-5 space-x-3"> 
-						<img class="w-6 h-6"src="img/Instagram.svg" alt="">
-						<img class="w-6 h-6"src="img/Github.svg" alt="">
-						<img class="w-6 h-6"src="img/Twitter.svg" alt="">
-						<img class="w-6 h-6"src="img/Linkedin.svg" alt="">
-					</div>
-				</div>  <!-- avatar -->
-				<div class="basis-1/2">
-					<img class="mx-auto scale-75" src="img/avatar1.png" alt="foto ketje">
-				</div>
-			</div>
-		</div>
+                        colors: {
+                            primary: "#5E3BEE",
+                            headingColor: "#282938",
+                            bgShade: "#F5FCFF",
+                            body: "#1C1E53",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="font-sans text-lg bg-bgShade ">
+        <nav
+            class="py-5 bg-white sticky top-0 z-50"
+            style="box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.1)"
+        >
+            <div class="flex w-10/12 justify-between mx-auto">
+                <div class="p-2">
+                    <a href="#" class="font-bold text-2xl">
+                        <!-- <img src="" alt=""> -->
+                        Code<span class="text-primary">Home</span> 
+                    </a>
+                </div>
 
-		<div id="services" class="bg-slate-50 pt-20 pb-20"> <!-- services -->
-			<div class="w-9/12 mx-auto">
-				<div class="flex flex-col"> <!-- judul -->
-					<div>
-						<div class="flex items-center">
-							<svg class="stroke-gray-400 stroke-2 h-5 w-5">
-								<line x1="0" y1="10px" x2="10px" y2="10px"/>
-							</svg>
-							<h2 class="uppercase text-xs font-extralight tracking-ngangkang">
-								services
-							</h2>
-						</div>
-						<h3 class="text-3xl">Specialized in</h3>
-					</div>
-				</div>
+                <div class="flex gap-7 p-2 ">
+                    <a href="#about" class="hover:text-primary">About Me</a>
+                    <a href="#expertise" class="hover:text-primary">Expertise</a>
+                    <a href="#portofolio" class="hover:text-primary">Portofolio</a>
+                </div>
 
-				<div class="grid grid-cols-3 gap-10 py-10"> <!-- cards -->
-					<div class="rounded-lg bg-white shadow-lg">
-						<div class="flex flex-col items-center py-10 px-10">
-							<div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
-								<img class="w-full" src="img/crown.svg" alt="">
-							</div>
-							<h4 class="text-black mt-5">
-								UI/UX Design
-							</h4>
-							<p class="text-center font-extralight text-sm mt-2 text-gray">
-								Turn what you have in mind of a digital product into reality. For any platform you consider.
-							</p>
-						</div>
-					</div>
-					<div class="rounded-lg bg-white shadow-lg">
-						<div class="flex flex-col items-center py-10 px-10">
-							<div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
-								<img class="w-full" src="img/app.svg" alt="">
-							</div>
-							<h4 class="text-black mt-5">
-								Application Development
-							</h4>
-							<p class="text-center font-extralight text-sm mt-2 text-gray">
-								Standard designing, building, and implementing your applications with documentation.
-							</p>
-						</div>
-					</div>
-					<div class="rounded-lg bg-white shadow-lg">
-						<div class="flex flex-col items-center py-10 px-10">
-							<div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
-								<img class="w-full" src="img/globe.svg" alt="">
-							</div>
-							<h4 class="text-black mt-5">
-								Web Development
-							</h4>
-							<p class="text-center font-extralight text-sm mt-2 text-gray">
-								Create and maintain your websites and also take care of its performance and traffic capacity.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div>
+                    <div class="border-2 border-primary p-2 rounded-md  text-primary hover:bg-primary hover:text-white">
+                        <a href="#contact" class="">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-		<div id="portfolio" class="bg-gray-950 py-40"> <!-- portfolio -->
-			<div class="w-9/12 mx-auto">
-				<div class="flex flex-col"> <!-- judul -->
-						<div class="flex items-center">
-							<svg class="stroke-gray-400 stroke-2 h-5 w-5">
-								<line x1="0" y1="10px" x2="10px" y2="10px"/>
-							</svg>
-							<h2 class="uppercase text-xs font-extralight tracking-ngangkang">
-								my works
-							</h2>
-						</div>
-						<h3 class="text-3xl text-white">Featured Portfolios</h3>
-				</div>
+        <main >
+            <div id="about" class="py-28  w-10/12 mx-auto">
+                <div class="flex items-center ">
+                    <div class="basis-1/2 mr-20">
+                        <h2>____________</h2>
+                        <h1 class="text-5xl font-bold py-5">I am Rizki, <span class="text-primary"> a Web Developer </span></h1>
+                        <p class="mb-5">Creative full-stack web developer with more than 2+ years of experience in enterprise companies and startups. Proficient in HTML, Tailwind CSS, Javascript, PHP, Laravel, NodeJS, and VueJS.</p>
+        
+                        <div class="py-3 px-5 bg-primary text-white rounded-md w-fit hover:bg-white hover:text-primary hover:ring-2 hover:ring-primary">
+                            <a href="#">Download CV</a>
+                        </div>
+                    </div>
+        
+                    <div class="basis-1/2">
+                        <img src="img/v1.png" alt="">
+                    </div>
+                </div>
+            </div>
 
-				<div class="grid grid-cols-4 gap-20 mt-20"> <!-- cards -->
-					<div class="rounded-lg shadow-lg overflow-hidden">
-						<img 
-							class="object-cover h-48 opacity-50"
-							src="img/companyprofile.png" alt="">
-						<div class="bg-white py-2 px-4">
-							<h4 class="text-sm font-medium text-gray-800">Company Profile</h4>
-							<h5 class="text-sm font-mono">Tailwind CSS</h5>
-						</div>
-					</div>
-						
-					<div class="rounded-lg shadow-lg overflow-hidden">
-						<img 
-							class="object-cover h-48 opacity-50"
-							src="img/dashboard.png" alt="">
-						<div class="bg-white py-2 px-4">
-							<h4 class="text-sm font-medium text-gray-800">Dashboard</h4>
-							<h5 class="text-sm font-mono">React JS</h5>
-						</div>
-					</div>
+            <div id="expertise" class="bg-white py-28">
+                <div class="w-10/12 mx-auto">
+                    <div>
+                        <h2 class=" text-xl ">My Skills</h2>
+                        <h1 class="font-bold text-4xl">My Expertise</h1>
+                    </div>
 
-					<div class="rounded-lg shadow-lg overflow-hidden">
-						<img 
-							class="object-cover h-48 opacity-50"
-							src="img/lms.png" alt="">
-						<div class="bg-white py-2 px-4">
-							<h4 class="text-sm font-medium text-gray-800">LMS</h4>
-							<h5 class="text-sm font-mono">PHP</h5>
-						</div>
-					</div>
+                    <div class="flex mt-16 gap-5">
+                
+                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
+                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
+                                <i class='fas fa-shield-alt w-auto text-3xl text-[#006B6A]'></i>
+                            </div>
+                            <h2 class="my-5 font-bold text-xl">BackEnd Developer</h2>
+                            <p> Building user interfaces and interactions in the browser using HTML, CSS, and JavaScript. Understanding frameworks such as Tailwind, Bootstrap, and Vue.js.</p>
+                        </div>
+                
+                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
+                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
+                                <i class='fas fa-code w-auto text-3xl text-[#006B6A]'></i>
+                            </div>
+                            <h2 class="my-5 font-bold text-xl">FrontEnd Developer</h2>
+                            <p> Developing servers, databases, and application business logic. Proficiency in programming languages such as Python, PHP, and frameworks such as Django, NodeJS, and Laravel.?</p>
+                        </div>
+                
+                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
+                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
+                                <i class='fas fa-pen-fancy w-auto text-3xl text-[#006B6A]'></i>
+                            </div>
+                            <h2 class="my-5 font-bold text-xl">UI&UX Desain</h2>
+                            <p>Visual design of user interfaces, including color, layout, and graphic elements. UX: Creating an intuitive and satisfying user experience through research, prototypes, and user-focused design.?</p>
+                        </div>
+                
+                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
+                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
+                                <i class='fas fa-bug w-auto text-3xl text-[#006B6A]'></i>
+                            </div>
+                            <h2 class="my-5 font-bold text-xl">Debuging</h2>
+                            <p>LThe process of identifying, understanding, and fixing bugs in the code. Requires understanding of programming languages, debugging tools, and analytical skills to improve software reliability and quality.</p>
+                        </div>
+                        
+                    </div>
 
-					<div class="rounded-lg shadow-lg overflow-hidden">
-						<img 
-							class="object-cover h-48 opacity-50"
-							src="img/agency.png" alt="">
-						<div class="bg-white py-2 px-4">
-							<h4 class="text-sm font-medium text-gray-800">Agency Website</h4>
-							<h5 class="text-sm font-mono">Wordpress</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
 
-		<div id="experiences" class="bg-gray-950 py-40"> <!-- experiences -->
-			<div class="mx-auto w-9/12 flex flex-row items-center">
-				<div class="basis-1/3">
-					<div class="flex flex-col"> <!-- judul -->
-						<div class="flex items-center">
-							<svg class="stroke-gray-400 stroke-2 h-5 w-5">
-								<line x1="0" y1="10px" x2="10px" y2="10px"/>
-							</svg>
-							<h2 class="uppercase text-xs font-extralight tracking-ngangkang">
-								career path
-							</h2>
-						</div>
-						<h3 class="text-3xl text-white">Experiences</h3>
+            <div id="portofolio" class="py-28 w-10/12 mx-auto">
+                <div>
+                    <h2 class="text-xl ">Recent Project</h2>
+                    <h1 class="text-3xl font-bold">My Portofolio</h1>
+                </div>
 
-						<div class="flex flex-col gap-y-5 mt-10 pr-20">
-							<a class = "hover:bg-blue-200 hover:text-blue-800 flex flex-row justify-between bg-white w-full p-4 rounded-lg" href=""><span>Apple</span> > </a>
-							<a class = "hover:bg-blue-200 hover:text-blue-800 flex flex-row justify-between bg-white w-full p-4 rounded-lg" href=""><span>Microsoft</span> > </a>
-							<a class = "hover:bg-blue-200 hover:text-blue-800 flex flex-row justify-between bg-white w-full p-4 rounded-lg" href=""><span>Google</span> > </a>
-							<a class = "hover:bg-blue-200 hover:text-blue-800 flex flex-row justify-between bg-white w-full p-4 rounded-lg" href=""><span>Tokopedia</span> > </a>
-						</div>
-					</div>
+                <div class="flex mt-16 gap-10">
 
-				</div>
+                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
+                        <div class="rounded-md overflow-hidden ">
+                            <img src="img/dashboard.png" alt="" class="object-cover h-[300px]">
+                        </div>
 
-				<div class="basis-2/3 pl-20">
-					<h4 class="text-2xl font-bold text-gray-200">Full-stack Web Developer Tokopedia</h4>
-					<h5 class="text-sm font-light">Jakarta, Indonesia</h5>
-					<p class="mt-5 text-light text-gray-200">Agustus 2020 - Present : Full Time</p>
-					<div class="mt-2">
-						<span class="border-white border border-solid px-2 py-1 rounded-md text-sm font-mono">React</span>
-						<span class="border-white border border-solid px-2 py-1 rounded-md text-sm font-mono">Laravel</span>
-					</div>
-					<hr class="my-5">
-					<ul class="list-disc list-inside leading-10">
-						<li>Develop and maintain the frontend and backend of web applications,</li>
-						<li>
-							Design and manage databases, ensuring data integrity, security, and efficiency,
-						</li>
-						<li>Collaborate with designers and user experience experts to improve website usability and visual appeal,</li>
-						<li>
-							Implement security measures to protect against vulnerabilities and ensure the web application's integrity.
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-xl">App Dashboard</h3>
+                            <p class="mb-5 mt-2">Visual application for real-time monitoring and analysis of data, facilitating decision-making.</p>
+    
+                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
+                        </div>
+                    </div>
 
-		<div id="contact" class="bg-white pt-40"> <!-- contact -->
-			<div class="mx-auto w-9/12 flex flex-row items-center">
-				<div class="basis-1/2">
-					<div class="flex flex-col"> <!-- judul -->
-						<div class="flex items-center">
-							<svg class="stroke-gray-400 stroke-2 h-5 w-5">
-								<line x1="0" y1="10px" x2="10px" y2="10px"/>
-							</svg>
-							<h2 class="uppercase text-xs font-extralight tracking-ngangkang">
-								Inquiry
-							</h2>
-						</div>
-						<h3 class="text-3xl text-gray-800">Contact Me</h3>
-					</div>
+                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
+                        <div class="rounded-md overflow-hidden ">
+                            <img src="img/companyprofile.png" alt="" class="object-cover h-[300px]">
+                        </div>
 
-					<form action="#" method="POST" class="max-w-md mt-10">
-						<div class="mb-4">
-							<label for="name" class="block text-gray-700 font-semibold">name</label>
-							<input class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950" type="text"/>
-						</div>
-						<div class="mb-4">
-							<label for="email" class="block text-gray-700 font-semibold">Email</label>
-							<input class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950" type="email"/>
-						</div>
-						<div class="mb-4">
-							<label for="message" class="block text-gray-700 font-semibold">Message</label>
-							<textarea class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950" name="" id="" cols="30" rows="4"></textarea>
-						</div>
-						<div>
-							<button class="hover:bg-blue-600 bg-blue-500 text-white font-semibold py-2 px-4 rounded-md w-full "type="submit">Send Email</button>
-						</div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-xl">Company Profile</h3>
+                            <p class="mb-5 mt-2">Brief overview of the company, including vision, mission, history, and portfolio, highlighting the company's identity and values.</p>
+    
+                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
+                        </div>
+                    </div>
 
-					</form>
-				</div>
+                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
+                        <div class="rounded-md overflow-hidden ">
+                            <img src="img/lms.png" alt="" class="object-cover h-[300px]">
+                        </div>
 
-				<div class="basis-1/2 ml-10">
-					<div class="flex flex-row gap-5 p-5">
-						<div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
-							<img class="w-full" src="img/pin.svg" alt="">
-						</div>
-						<div>
-							<h4 class="text-lg text-gray-800 font-medium">Address</h4>
-							<h5 class="font-thin">Jalan Bawangan, Siwalan, Gayamsari, Semarang, Indonesia</h5>
-						</div>
-					</div>
+                        <div class="p-5">
+                            <h3 class="font-bold text-xl">LSM</h3>
+                            <p class="mb-5 mt-2">Efficient digital platform for managing, delivering, and tracking learning. Ideal for integrated management of courses, materials, and evaluations.</p>
+    
+                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
+                        </div>
+                    </div>
 
-					<div class="flex flex-row gap-5 p-5">
-						<div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
-							<img class="w-full" src="img/phone call.svg" alt="">
-						</div>
-						<div>
-							<h4 class="text-lg text-gray-800 font-medium">Phone Call</h4>
-							<h5 class="font-thin">(+62) 926-439-852</h5>
-						</div>
-					</div>
 
-					<div class="flex flex-row gap-5 p-5">
-						<div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
-							<img class="w-full" src="img/mail.svg" alt="">
-						</div>
-						<div>
-							<h4 class="text-lg text-gray-800 font-medium">E-Mail</h4>
-							<h5 class="font-thin">murizki3108@gmail.com</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
+                </div>
+            </div>
 
-	<footer class="bg-white text-center pt-10 pb-10 font-mono -mt-20"> <!-- footer -->
-		2023 Muh. Rizki Kurniawan. All rights reserved
-	</footer>
-</body>
+            <div id="contact" class="bg-white py-28"> <!-- contact -->
+                <div class="mx-auto w-10/12 flex flex-row items-center">
+                    <div class="basis-1/2">
+                        <div class="flex flex-col"> <!-- judul -->
+                                <h2 class="text-xl ">
+                                    Get In Touch
+                                </h2>
+                            <h3 class="text-3xl font-bold">Contact Me</h3>
+                        </div>
+    
+                        <form action="#" method="POST" class="max-w-md mt-10">
+                            <div class="mb-4">
+                                <label for="name" class="block ">Name</label>
+                                <input class="ring-primary ring-1 focus:ring-re rounded-md px-4 py-2 w-full " type="text"/>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block ">Email</label>
+                                <input class="ring-primary ring-1 rounded-md px-4 py-2 w-full " type="email"/>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block ">Message</label>
+                                <textarea class="ring-primary ring-1 rounded-md px-4 py-2 w-full " name="" id="" cols="30" rows="4"></textarea>
+                            </div>
+                            <button class="py-3 px-5 bg-primary rounded-md w-fit ring-1 text-white hover:scale-105 transition ease-in-out" type="submit">
+                                Submit
+                            </button>
+    
+                        </form>
+                    </div>
+    
+                    <div class="basis-1/2">
+                        <div class="flex flex-row gap-5 p-5">
+                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
+                                <img class="w-full" src="img/pin.svg" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">Address</h4>
+                                <h5 class="font-thin">Jalan Bawangan, Siwalan, Gayamsari, Semarang, Indonesia</h5>
+                            </div>
+                        </div>
+    
+                        <div class="flex flex-row gap-5 p-5">
+                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
+                                <img class="w-full" src="img/phone call.svg" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">Phone Call</h4>
+                                <h5 class="font-thin">(+62) 926-439-852</h5>
+                            </div>
+                        </div>
+    
+                        <div class="flex flex-row gap-5 p-5">
+                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
+                                <img class="w-full" src="img/mail.svg" alt="">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">E-Mail</h4>
+                                <h5 class="font-thin">murizki3108@gmail.com</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             
+        </main>
+
+        <footer class="text-center py-5 "> <!-- footer -->
+            2023 CodeHome. All rights reserved
+        </footer>
+
+    </body>
+
 </html>
