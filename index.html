@@ -41,221 +41,463 @@
                 },
             };
         </script>
+        <!-- {{-- vue js --}} -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
-    <body class="font-sans text-lg bg-bgShade ">
-        <nav
-            class="py-5 bg-white sticky top-0 z-50"
-            style="box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.1)"
-        >
-            <div class="flex w-10/12 justify-between mx-auto">
-                <div class="p-2">
-                    <a href="#" class="font-bold text-2xl">
-                        <!-- <img src="" alt=""> -->
-                        Code<span class="text-primary">Home</span> 
-                    </a>
+    <body class="font-sans text-lg bg-bgShade">
+        <div id="application">
+            <nav
+                class="py-5 bg-white sticky top-0 z-50"
+                style="box-shadow: 0px 5.33333px 80px 0px rgba(0, 0, 0, 0.1)"
+            >
+                <div class="flex w-10/12 justify-between mx-auto items-center">
+                    <div class="p-2">
+                        <a href="#" class="font-bold text-xl md:text-2xl">
+                            <!-- <img src="" alt=""> -->
+                            Code<span class="text-primary">Home</span>
+                        </a>
+                    </div>
+
+                    <div class="hidden sm:flex gap-7 p-2">
+                        <a href="#about" class="hover:text-primary">About Me</a>
+                        <a href="#expertise" class="hover:text-primary"
+                            >Expertise</a
+                        >
+                        <a href="#portofolio" class="hover:text-primary"
+                            >Portofolio</a
+                        >
+                    </div>
+
+                    <div class="hidden sm:flex">
+                        <div
+                            class="border-2 border-primary p-2 rounded-md text-primary hover:bg-primary hover:text-white"
+                        >
+                            <a href="#contact" class="">Contact Me</a>
+                        </div>
+                    </div>
+
+                    <div @click="showMenuDetails" class="sm:hidden">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
 
-                <div class="flex gap-7 p-2 ">
+                <div
+                    v-if="menuDetailsVisible"
+                    class="sm:hidden flex flex-col text-center gap-5 pt-3 transition-transform transform origin-top"
+                >
                     <a href="#about" class="hover:text-primary">About Me</a>
-                    <a href="#expertise" class="hover:text-primary">Expertise</a>
-                    <a href="#portofolio" class="hover:text-primary">Portofolio</a>
-                </div>
-
-                <div>
-                    <div class="border-2 border-primary p-2 rounded-md  text-primary hover:bg-primary hover:text-white">
+                    <a href="#expertise" class="hover:text-primary"
+                        >Expertise</a
+                    >
+                    <a href="#portofolio" class="hover:text-primary"
+                        >Portofolio</a
+                    >
+                    <div
+                        class="mx-auto border-2 border-primary p-2 rounded-md text-primary w-fit hover:bg-primary hover:text-white"
+                    >
                         <a href="#contact" class="">Contact Me</a>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <main >
-            <div id="about" class="py-28  w-10/12 mx-auto">
-                <div class="flex items-center ">
-                    <div class="basis-1/2 mr-20">
-                        <h2>____________</h2>
-                        <h1 class="text-5xl font-bold py-5">I am Rizki, <span class="text-primary"> a Web Developer </span></h1>
-                        <p class="mb-5">Creative full-stack web developer with more than 2+ years of experience in enterprise companies and startups. Proficient in HTML, Tailwind CSS, Javascript, PHP, Laravel, NodeJS, and VueJS.</p>
-        
-                        <div class="py-3 px-5 bg-primary text-white rounded-md w-fit hover:bg-white hover:text-primary hover:ring-2 hover:ring-primary">
-                            <a href="#">Download CV</a>
+            <main>
+                <div id="about" class="md:py-20 lg:py-28 py-5 w-10/12 mx-auto">
+                    <div class="flex flex-col items-center md:flex-row">
+                        <div class="basis-1/2 md:mr-20">
+                            <h2 class="hidden md:inline">____________</h2>
+                            <h2 class="md:hidden">________</h2>
+                            <h1
+                                class="text-3xl md:text-4xl lg:text-5xl font-bold py-5"
+                            >
+                                I am Rizki,
+                                <span class="text-primary">
+                                    a Web Developer
+                                </span>
+                            </h1>
+                            <p class="mb-5">
+                                Creative full-stack web developer with more than
+                                2+ years of experience in enterprise companies
+                                and startups. Proficient in HTML, Tailwind CSS,
+                                Javascript, PHP, Laravel, NodeJS, and VueJS.
+                            </p>
+
+                            <div
+                                class="py-3 px-5 bg-primary text-white rounded-md w-fit hover:bg-white hover:text-primary hover:ring-2 hover:ring-primary"
+                            >
+                                <a href="#">Download CV</a>
+                            </div>
                         </div>
-                    </div>
-        
-                    <div class="basis-1/2">
-                        <img src="img/v1.png" alt="">
+
+                        <div class="basis-1/2 mt-20 md:mt-0">
+                            <img src="img/v1.png" alt="" />
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div id="expertise" class="bg-white py-28">
-                <div class="w-10/12 mx-auto">
-                    <div>
-                        <h2 class=" text-xl ">My Skills</h2>
-                        <h1 class="font-bold text-4xl">My Expertise</h1>
-                    </div>
-
-                    <div class="flex mt-16 gap-5">
-                
-                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
-                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
-                                <i class='fas fa-shield-alt w-auto text-3xl text-[#006B6A]'></i>
-                            </div>
-                            <h2 class="my-5 font-bold text-xl">BackEnd Developer</h2>
-                            <p> Building user interfaces and interactions in the browser using HTML, CSS, and JavaScript. Understanding frameworks such as Tailwind, Bootstrap, and Vue.js.</p>
-                        </div>
-                
-                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
-                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
-                                <i class='fas fa-code w-auto text-3xl text-[#006B6A]'></i>
-                            </div>
-                            <h2 class="my-5 font-bold text-xl">FrontEnd Developer</h2>
-                            <p> Developing servers, databases, and application business logic. Proficiency in programming languages such as Python, PHP, and frameworks such as Django, NodeJS, and Laravel.?</p>
-                        </div>
-                
-                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
-                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
-                                <i class='fas fa-pen-fancy w-auto text-3xl text-[#006B6A]'></i>
-                            </div>
-                            <h2 class="my-5 font-bold text-xl">UI&UX Desain</h2>
-                            <p>Visual design of user interfaces, including color, layout, and graphic elements. UX: Creating an intuitive and satisfying user experience through research, prototypes, and user-focused design.?</p>
-                        </div>
-                
-                        <div class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50">
-                            <div class="w-14 h-14 bg-white rounded-md justify-center items-center flex" style="box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);">
-                                <i class='fas fa-bug w-auto text-3xl text-[#006B6A]'></i>
-                            </div>
-                            <h2 class="my-5 font-bold text-xl">Debuging</h2>
-                            <p>The process of identifying, understanding, and fixing bugs in the code. Requires understanding of programming languages, debugging tools, and analytical skills to improve software reliability and quality.</p>
-                        </div>
-                        
-                    </div>
-
-                </div>
-            </div>
-
-            <div id="portofolio" class="py-28 w-10/12 mx-auto">
-                <div>
-                    <h2 class="text-xl ">Recent Project</h2>
-                    <h1 class="text-3xl font-bold">My Portofolio</h1>
-                </div>
-
-                <div class="flex mt-16 gap-10">
-
-                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110 flex-1" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
-                        <div class="rounded-md overflow-hidden ">
-                            <img src="img/dashboard.png" alt="" class="object-cover h-[300px]">
+                <div id="expertise" class="bg-white md:py-20 lg:py-28 py-5">
+                    <div class="w-10/12 mx-auto">
+                        <div>
+                            <h2 class="md:text-xl">My Skills</h2>
+                            <h1 class="font-bold text-2xl md:text-4xl">
+                                My Expertise
+                            </h1>
                         </div>
 
-                        <div class="p-5">
-                            <h3 class="font-bold text-xl">App Dashboard</h3>
-                            <p class="mb-5 mt-2">Visual application for real-time monitoring and analysis of data, facilitating decision-making.</p>
-    
-                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110 flex-1" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
-                        <div class="rounded-md overflow-hidden ">
-                            <img src="img/companyprofile.png" alt="" class="object-cover h-[300px]">
-                        </div>
-
-                        <div class="p-5">
-                            <h3 class="font-bold text-xl">Company Profile</h3>
-                            <p class="mb-5 mt-2">Brief overview of the company, including vision, mission, history, and portfolio, highlighting the company's identity and values.</p>
-    
-                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="rounded-md bg-white transition ease-in-out delay-150 duration-200  hover:-translate-y-1 hover:scale-110 flex-1" style="box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);">
-                        <div class="rounded-md overflow-hidden ">
-                            <img src="img/lms.png" alt="" class="object-cover h-[300px]">
-                        </div>
-
-                        <div class="p-5">
-                            <h3 class="font-bold text-xl">LSM</h3>
-                            <p class="mb-5 mt-2">Efficient digital platform for managing, delivering, and tracking learning. Ideal for integrated management of courses, materials, and evaluations.</p>
-    
-                            <a href="#" class="pb-2 hover:border-b-2 hover:border-primary">Live Preview <i class="fas fa-external-link-alt text-[#006B6A] ml-2"></i></a>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div id="contact" class="bg-white py-28"> <!-- contact -->
-                <div class="mx-auto w-10/12 flex flex-row items-center">
-                    <div class="basis-1/2">
-                        <div class="flex flex-col"> <!-- judul -->
-                                <h2 class="text-xl ">
-                                    Get In Touch
+                        <div
+                            class="grid mt-16 gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                        >
+                            <div
+                                class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50"
+                            >
+                                <div
+                                    class="w-14 h-14 bg-white rounded-md justify-center items-center flex"
+                                    style="
+                                        box-shadow: 0px 0px 16px 0px
+                                            rgba(0, 0, 0, 0.1);
+                                    "
+                                >
+                                    <i
+                                        class="fas fa-shield-alt w-auto text-3xl text-[#006B6A]"
+                                    ></i>
+                                </div>
+                                <h2 class="my-5 font-bold text-xl">
+                                    BackEnd Developer
                                 </h2>
-                            <h3 class="text-3xl font-bold">Contact Me</h3>
-                        </div>
-    
-                        <form action="#" method="POST" class="max-w-md mt-10">
-                            <div class="mb-4">
-                                <label for="name" class="block ">Name</label>
-                                <input class="ring-primary ring-1 focus:ring-re rounded-md px-4 py-2 w-full " type="text"/>
+                                <p>
+                                    Building user interfaces and interactions in
+                                    the browser using HTML, CSS, and JavaScript.
+                                    Understanding frameworks such as Tailwind,
+                                    Bootstrap, and Vue.js.
+                                </p>
                             </div>
-                            <div class="mb-4">
-                                <label for="email" class="block ">Email</label>
-                                <input class="ring-primary ring-1 rounded-md px-4 py-2 w-full " type="email"/>
+
+                            <div
+                                class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50"
+                            >
+                                <div
+                                    class="w-14 h-14 bg-white rounded-md justify-center items-center flex"
+                                    style="
+                                        box-shadow: 0px 0px 16px 0px
+                                            rgba(0, 0, 0, 0.1);
+                                    "
+                                >
+                                    <i
+                                        class="fas fa-code w-auto text-3xl text-[#006B6A]"
+                                    ></i>
+                                </div>
+                                <h2 class="my-5 font-bold text-xl">
+                                    FrontEnd Developer
+                                </h2>
+                                <p>
+                                    Developing servers, databases, and
+                                    application business logic. Proficiency in
+                                    programming languages such as Python, PHP,
+                                    and frameworks such as Django, NodeJS, and
+                                    Laravel.?
+                                </p>
                             </div>
-                            <div class="mb-4">
-                                <label for="message" class="block ">Message</label>
-                                <textarea class="ring-primary ring-1 rounded-md px-4 py-2 w-full " name="" id="" cols="30" rows="4"></textarea>
+
+                            <div
+                                class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50"
+                            >
+                                <div
+                                    class="w-14 h-14 bg-white rounded-md justify-center items-center flex"
+                                    style="
+                                        box-shadow: 0px 0px 16px 0px
+                                            rgba(0, 0, 0, 0.1);
+                                    "
+                                >
+                                    <i
+                                        class="fas fa-pen-fancy w-auto text-3xl text-[#006B6A]"
+                                    ></i>
+                                </div>
+                                <h2 class="my-5 font-bold text-xl">
+                                    UI&UX Desain
+                                </h2>
+                                <p>
+                                    Visual design of user interfaces, including
+                                    color, layout, and graphic elements. UX:
+                                    Creating an intuitive and satisfying user
+                                    experience through research, prototypes, and
+                                    user-focused design.?
+                                </p>
                             </div>
-                            <button class="py-3 px-5 bg-primary rounded-md w-fit ring-1 text-white hover:scale-105 transition ease-in-out" type="submit">
-                                Submit
-                            </button>
-    
-                        </form>
-                    </div>
-    
-                    <div class="basis-1/2">
-                        <div class="flex flex-row gap-5 p-5">
-                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
-                                <img class="w-full" src="img/pin.svg" alt="">
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium">Address</h4>
-                                <h5 class="font-thin">Jalan Bawangan, Siwalan, Gayamsari, Semarang, Indonesia</h5>
-                            </div>
-                        </div>
-    
-                        <div class="flex flex-row gap-5 p-5">
-                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
-                                <img class="w-full" src="img/phone call.svg" alt="">
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium">Phone Call</h4>
-                                <h5 class="font-thin">(+62) 926-439-852</h5>
-                            </div>
-                        </div>
-    
-                        <div class="flex flex-row gap-5 p-5">
-                            <div class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl">
-                                <img class="w-full" src="img/mail.svg" alt="">
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium">E-Mail</h4>
-                                <h5 class="font-thin">murizki3108@gmail.com</h5>
+
+                            <div
+                                class="flex-1 bg-bgShade p-8 rounded-md hover:border-b-4 hover:border-primary hover:shadow-2xl transition-shadow duration-50"
+                            >
+                                <div
+                                    class="w-14 h-14 bg-white rounded-md justify-center items-center flex"
+                                    style="
+                                        box-shadow: 0px 0px 16px 0px
+                                            rgba(0, 0, 0, 0.1);
+                                    "
+                                >
+                                    <i
+                                        class="fas fa-bug w-auto text-3xl text-[#006B6A]"
+                                    ></i>
+                                </div>
+                                <h2 class="my-5 font-bold text-xl">Debuging</h2>
+                                <p>
+                                    The process of identifying, understanding,
+                                    and fixing bugs in the code. Requires
+                                    understanding of programming languages,
+                                    debugging tools, and analytical skills to
+                                    improve software reliability and quality.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-             
-        </main>
+                <div id="portofolio" class="md:py-20 lg:py-28 py-5 w-10/12 mx-auto">
+                    <div>
+                        <h2 class="md:text-xl">Recent Project</h2>
+                        <h1 class="font-bold text-2xl md:text-4xl">
+                            My Portofolio
+                        </h1>
+                    </div>
 
-        <footer class="text-center py-5 "> <!-- footer -->
-            2023 CodeHome. All rights reserved
-        </footer>
+                    <div class="grid mt-16 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                        <div
+                            class="rounded-md bg-white transition ease-in-out delay-150 duration-200 hover:-translate-y-1 hover:scale-110 flex-1"
+                            style="
+                                box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+                            "
+                        >
+                            <div class="rounded-md overflow-hidden">
+                                <img
+                                    src="img/dashboard.png"
+                                    alt=""
+                                    class="object-cover h-[300px]"
+                                />
+                            </div>
 
+                            <div class="p-5">
+                                <h3 class="font-bold text-xl">App Dashboard</h3>
+                                <p class="mb-5 mt-2">
+                                    Visual application for real-time monitoring
+                                    and analysis of data, facilitating
+                                    decision-making.
+                                </p>
+
+                                <a
+                                    href="#"
+                                    class="pb-2 hover:border-b-2 hover:border-primary"
+                                    >Live Preview
+                                    <i
+                                        class="fas fa-external-link-alt text-[#006B6A] ml-2"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="rounded-md bg-white transition ease-in-out delay-150 duration-200 hover:-translate-y-1 hover:scale-110 flex-1"
+                            style="
+                                box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+                            "
+                        >
+                            <div class="rounded-md overflow-hidden">
+                                <img
+                                    src="img/companyprofile.png"
+                                    alt=""
+                                    class="object-cover h-[300px]"
+                                />
+                            </div>
+
+                            <div class="p-5">
+                                <h3 class="font-bold text-xl">
+                                    Company Profile
+                                </h3>
+                                <p class="mb-5 mt-2">
+                                    Brief overview of the company, including
+                                    vision, mission, history, and portfolio,
+                                    highlighting the company's identity and
+                                    values.
+                                </p>
+
+                                <a
+                                    href="#"
+                                    class="pb-2 hover:border-b-2 hover:border-primary"
+                                    >Live Preview
+                                    <i
+                                        class="fas fa-external-link-alt text-[#006B6A] ml-2"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+
+                        <div
+                            class="rounded-md bg-white transition ease-in-out delay-150 duration-200 hover:-translate-y-1 hover:scale-110 flex-1"
+                            style="
+                                box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+                            "
+                        >
+                            <div class="rounded-md overflow-hidden">
+                                <img
+                                    src="img/lms.png"
+                                    alt=""
+                                    class="object-cover h-[300px]"
+                                />
+                            </div>
+
+                            <div class="p-5">
+                                <h3 class="font-bold text-xl">LSM</h3>
+                                <p class="mb-5 mt-2">
+                                    Efficient digital platform for managing,
+                                    delivering, and tracking learning. Ideal for
+                                    integrated management of courses, materials,
+                                    and evaluations.
+                                </p>
+
+                                <a
+                                    href="#"
+                                    class="pb-2 hover:border-b-2 hover:border-primary"
+                                    >Live Preview
+                                    <i
+                                        class="fas fa-external-link-alt text-[#006B6A] ml-2"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contact" class="bg-white md:py-20 lg:py-28 py-5">
+                    <!-- contact -->
+                    <div class="mx-auto w-10/12 flex flex-col md:flex-row md:items-center">
+                        <div class="basis-1/2">
+                            <div class="flex flex-col">
+                                <!-- judul -->
+                                <h2 class="md:text-xl">Get In Touch</h2>
+                                <h3 class="font-bold text-2xl md:text-4xl">Contact Me</h3>
+
+                            </div>
+
+                            <form
+                                action="#"
+                                method="POST"
+                                class="md:max-w-md mt-10"
+                            >
+                                <div class="mb-4">
+                                    <label for="name" class="block">Name</label>
+                                    <input
+                                        class="ring-primary ring-1 focus:ring-re rounded-md px-4 py-2 w-full"
+                                        type="text"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block"
+                                        >Email</label
+                                    >
+                                    <input
+                                        class="ring-primary ring-1 rounded-md px-4 py-2 w-full"
+                                        type="email"
+                                    />
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="block"
+                                        >Message</label
+                                    >
+                                    <textarea
+                                        class="ring-primary ring-1 rounded-md px-4 py-2 w-full"
+                                        name=""
+                                        id=""
+                                        cols="30"
+                                        rows="4"
+                                    ></textarea>
+                                </div>
+                                <button
+                                    class="py-3 px-5 bg-primary rounded-md w-fit ring-1 text-white hover:scale-105 transition ease-in-out"
+                                    type="submit"
+                                >
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="basis-1/2 mt-10 md:mt-0">
+                            <div class="flex flex-row gap-5 py-5">
+                                <div
+                                    class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl"
+                                >
+                                    <img
+                                        class="w-full"
+                                        src="img/pin.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium">Address</h4>
+                                    <h5 class="font-thin">
+                                        Jalan Bawangan, Siwalan, Gayamsari,
+                                        Semarang, Indonesia
+                                    </h5>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row gap-5 py-5">
+                                <div
+                                    class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl"
+                                >
+                                    <img
+                                        class="w-full"
+                                        src="img/phone call.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium">
+                                        Phone Call
+                                    </h4>
+                                    <h5 class="font-thin">(+62) 926-439-852</h5>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row gap-5 py-5">
+                                <div
+                                    class="w-10 h-10 p-2 bg-bgShade ring-1 ring-primary rounded-2xl"
+                                >
+                                    <img
+                                        class="w-full"
+                                        src="img/mail.svg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium">E-Mail</h4>
+                                    <h5 class="font-thin">
+                                        murizki3108@gmail.com
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="text-center py-5">
+                <!-- footer -->
+                2023 CodeHome. All rights reserved
+            </footer>
+        </div>
+
+        <script>
+            const myApp = Vue.createApp({
+                data() {
+                    return {
+                        menuDetailsVisible: false,
+                    };
+                },
+                methods: {
+                    showMenuDetails() {
+                        this.menuDetailsVisible = !this.menuDetailsVisible;
+                    },
+                },
+            });
+
+            myApp.mount("#application");
+        </script>
     </body>
-
 </html>
